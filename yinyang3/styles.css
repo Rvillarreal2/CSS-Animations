@@ -1,0 +1,71 @@
+html, body {
+    background: radial-gradient(rgb(131, 126, 126), rgb(58, 56, 56), black);
+    margin: 0;
+    padding: 0;
+}
+.box {
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+    transform: perspective(1000px) rotateZ(-45deg);
+    transform-style: preserve-3d;
+}
+.box div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.box div span {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.box div span:nth-child(1) {
+    animation: animate 1s linear infinite;
+}
+.box div span:nth-child(2) {
+    animation: animate 1s linear infinite;
+    animation-delay: .2s;
+}
+.box div span:nth-child(3) {
+    animation: animate 1s linear infinite;
+    animation-delay: .4s;
+}
+.box div span:nth-child(4) {
+    animation: animate 1s linear infinite;
+    animation-delay: .6s;
+}
+.box div span:nth-child(5) {
+    animation: animate 1s linear infinite;
+    animation-delay: .8s;
+}
+
+@keyframes animate {
+    0% {
+        transform: perspective(1000px) rotateX(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateX(3599deg) rotateY(359deg) rotateZ(3599deg);
+    }
+}
+@keyframes animate2 {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    33% {
+        transform: translate3d(50px, 50px, 50px);
+    }
+    66% {
+        transform: translate3d(100px, 100px, 0);
+    }
+    100% {
+        transform: translate3d(0px, 0px, 0px);
+    }
+}
