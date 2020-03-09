@@ -27,6 +27,21 @@ html, body {
     width: 100%;
     height: 100%;
 }
+/* .box div span:nth-child(1) {
+    transform: rotate3d(45, 45, 0, 45deg) perspective(1000px);
+}
+.box div span:nth-child(2) {
+    transform: rotate3d(90, 90, 0, 90deg) perspective(1000px);
+}
+.box div span:nth-child(3) {
+    transform: rotate3d(135, 135, 0, 135deg) perspective(1000px);
+}
+.box div span:nth-child(4) {
+    transform: rotate3d(180, 180, 0, 180deg) perspective(1000px);
+}
+.box div span:nth-child(5) {
+    transform: rotate3d(225, 225, 0, 225deg) perspective(1000px);
+} */
 .box div span:nth-child(1) {
     animation: animate 1s linear infinite;
 }
@@ -52,7 +67,7 @@ html, body {
         transform: perspective(1000px) rotateX(0deg);
     }
     100% {
-        transform: perspective(1000px) rotateX(3599deg) rotateY(359deg) rotateZ(3599deg);
+        transform: perspective(1000px) rotateY(3599deg) rotateX(359deg) rotate(3599deg);
     }
 }
 @keyframes animate2 {
